@@ -4,6 +4,9 @@ import HelloWorld from '@/components/HelloWorld'
 import AboutVmodel from '../view/about-vmodel/index.js'
 import HomeNav from '../view/home-nav/index.js'
 
+const modulesFiles = require.context('../view', true, /\index.js$/)
+console.log('modulesFiles', modulesFiles)
+
 Vue.use(Router)
 
 const componentsArray = [
