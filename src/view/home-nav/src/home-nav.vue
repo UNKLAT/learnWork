@@ -5,13 +5,48 @@
         <a href="/AboutVmodel" @click="toPath('AboutVmodel')"> 关于v-model </a>
       </li>
     </ul>
+
+    <tab-bar>
+      
+      <tab-bar-item>
+        <div slot="icon"> icon </div>
+        <div slot="title"> title </div>
+      </tab-bar-item>
+
+      <tab-bar-item 
+        active-color="blue"
+      >
+        <div slot="icon"> icon </div>
+        <div slot="title"> title </div>
+      </tab-bar-item>
+
+      <tab-bar-item>
+        <div slot="icon"> icon </div>
+        <div slot="title"> title </div>
+      </tab-bar-item>
+
+      <tab-bar-item>
+        <div slot="icon"> icon </div>
+        <div slot="title"> title </div>
+      </tab-bar-item>
+
+    </tab-bar>
+
   </div>
 </template>
 
 <script>
 
+import tabBar from '../../../components/tabBar/tabBar.vue'
+import tabBarItem from '../../../components/tabBar/tabBarItem.vue'
+
+
 export default {
   name: 'HomeNav',
+  components: {
+    tabBar,
+    tabBarItem,
+  },
   data() {
     return {}
   },
