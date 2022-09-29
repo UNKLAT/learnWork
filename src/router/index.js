@@ -32,10 +32,16 @@ componentsArray.forEach((component) => {
 export default new Router({
   mode: 'history',
   routes: [
+    // {
+    //   path: '/',
+    //   name: 'HelloWorld',
+    //   component: HelloWorld
+    // },
+
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      // name: 'HelloWorld',
+      redirect: 'homeNav',
     },
 
     ...routerList,
