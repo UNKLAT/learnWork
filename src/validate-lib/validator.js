@@ -1,8 +1,8 @@
 /**
  * 校验器类
  */
-// import validateCategery from "./validate-categery";
-const validateCategery = require('./validate-categery')
+import validateCategery from "./validate-categery";
+// const validateCategery = require('./validate-categery')
 
 class Validator {
   constructor() {
@@ -24,5 +24,5 @@ class Validator {
   }
 }
 
-// export default Validator
-module.exports = Validator
+export default Validator
+// module.exports = Validator

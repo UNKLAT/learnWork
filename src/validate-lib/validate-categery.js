@@ -24,5 +24,5 @@ const validateCategery = {
   },
 }
 
-// export default validateCategery
-module.exports = validateCategery
+export default validateCategery
+// module.exports = validateCategery

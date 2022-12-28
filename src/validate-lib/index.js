@@ -1,5 +1,5 @@
-// import Validator from "./validator";
-let Validator = require('./validator')
+import Validator from "./validator";
+// let Validator = require('./validator')
 
 
 let validate = new Validator()
@@ -47,3 +47,6 @@ setValidate(testData, rules)
 
 
 validate.validate()
+export default {
+  setValidate
+}
