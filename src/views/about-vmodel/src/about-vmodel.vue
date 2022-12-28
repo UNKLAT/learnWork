@@ -2,10 +2,15 @@
 
   <div>
 
+    <div>
+      <span> v-model使用验证 </span>
+    </div>
+
     <div class="vmodel-input">
 
+
       <div>
-        <span> v-model使用验证 </span>
+        <span> 直接使用底层el-input</span>
 
         <vmodel-input 
           v-model="vInputValue"
@@ -13,15 +18,19 @@
         </vmodel-input>
       </div>
 
-      <label-input
-        extend-class="div-display__inline-block"
-        :label-show="false"
-        v-model='testValue'
-        clearable
-      ></label-input> 
+      <div>
+        <span>二次封装扩展</span>
+        <label-input
+          extend-class="div-display__inline-block"
+          :label-show="false"
+          v-model='testValue'
+          clearable
+        ></label-input>         
+      </div>
+
+
 
     </div>
-
 
   </div>
 
@@ -38,6 +47,16 @@ export default {
       vInputValue: '',
       testValue: '',
     }
+  },
+
+  watch: {
+    vInputValue(val) {
+      console.log(val, 'vInputValue')
+    },
+
+    testValue(val) {
+      console.log(val, 'testValue')
+    },
   },
 }
 </script>

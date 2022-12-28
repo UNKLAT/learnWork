@@ -32,6 +32,11 @@
 
     </tab-bar>
 
+    <div>
+
+      <os-pagination />
+    </div>
+
   </div>
 </template>
 

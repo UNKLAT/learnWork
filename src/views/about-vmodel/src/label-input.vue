@@ -130,11 +130,11 @@ export default {
   methods: {
 
     inputValue(value){
-      value = 159
+      // value = 159
       console.log(value, this.typeLimit, typeof value, 'inputValue')
       // this.$emit('input', event.target.value)
       
-      this.$emit('input', 159)
+      this.$emit('input', value)
     },
 
     inputKeyup(event) {
