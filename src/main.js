@@ -7,6 +7,9 @@ import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import { osPagination } from '../learn-lib/src/index'
 
+
+import './styles/index.css' // global css
+
 Vue.config.productionTip = false
 Vue.use(Element)
 Vue.use(osPagination)
