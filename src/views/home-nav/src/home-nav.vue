@@ -2,7 +2,7 @@
   <div>
     <ul>
       <li>
-        <a href="/AboutVmodel" @click="toPath('AboutVmodel')"> 关于v-model </a>
+        <a href="/AboutVmodel/index" @click="toPath('AboutVmodel')"> 关于v-model </a>
       </li>
     </ul>
 
