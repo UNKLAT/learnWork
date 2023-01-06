@@ -10,6 +10,8 @@ import { osPagination } from '../learn-lib/src/index'
 
 import './styles/index.css' // global css
 
+import './permission.js' // permission control
+
 Vue.config.productionTip = false
 Vue.use(Element)
 Vue.use(osPagination)
