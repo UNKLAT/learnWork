@@ -7,7 +7,7 @@ import Router from 'vue-router'
 import Login from '../views/login/index.vue'
 
 /* Layout */
-// import Layout from '@/layout'
+import Layout from '@/layout'
 
 /* Router Modules */
 // import componentsRouter from './modules/components'
@@ -74,15 +74,7 @@ componentsArray.forEach((component) => {
  */
 export const constantRoutes = [
 
-  // {
-  //   path: '/homeNav',
-  //   // name: 'HelloWorld',
-  //   redirect: 'homeNav',
-  //   name: component.name,
-  //   component: component
-  // },
-
-  ...routerList,
+  // ...routerList,
 
   // {
   //   path: '/redirect',
@@ -98,8 +90,41 @@ export const constantRoutes = [
   {
     path: '/',
     redirect: '/login',
+  },
+
+  {
+    path: '/login',
+    name: 'Login',
     component: () => import('@/views/login/index.vue'),
-    hidden: true
+    hidden: true,
+  },
+
+  {
+    path: '/homeNav',
+    component: Layout,
+    redirect: '/homeNav/index',
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/home-nav/index.js'),
+        name: 'homeNav',
+        meta: { title: 'homeNav', icon: 'homeNav', affix: true }
+      }
+    ]
+  },
+
+  {
+    path: '/AboutVmodel',
+    component: Layout,
+    redirect: '/AboutVmodel/index',
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/about-vmodel/index.js'),
+        name: 'AboutVmodel',
+        meta: { title: 'AboutVmodel', icon: 'AboutVmodel', affix: true }
+      }
+    ]
   },
 
   // {
